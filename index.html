@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>The Watcher</title>
+</head>
+<body>
+  <div class="card">
+    <audio src="./assets/vine-boom.mp3" class="enter"></audio>
+    <div class="card__content">
+      <div class="card__front">
+        <h1>Are you sure?</h1>
+      </div>
+      <div class="card__back">
+        <img src="./assets/watcher.png" />
+      </div>
+    </div>
+  </div>
+  <script>
+    const card = document.querySelector('.card');
+    const audioArr = document.getElementsByTagName('audio');
+    console.log('audioArr', audioArr);
+
+    card.addEventListener('mouseenter', () => {
+      audioArr[0].play();
+    });
+  </script>
+</body>
+</html>
